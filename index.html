@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeAlpha Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- FontAwesome for standard media icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="player-container">
+        
+        <!-- Album Art / CD -->
+        <div class="album-art">
+            <img src="" alt="Album Art" id="cover">
+        </div>
+        
+        <!-- Track Information -->
+        <div class="track-info">
+            <h2 id="title">Track Title</h2>
+            <h3 id="artist">Artist Name</h3>
+        </div>
+
+        <!-- The actual audio element -->
+        <audio id="audio"></audio>
+
+        <!-- Progress Bar and Timers -->
+        <div class="progress-container">
+            <span id="current-time">0:00</span>
+            <input type="range" id="progress-bar" min="0" max="100" value="0">
+            <span id="duration">0:00</span>
+        </div>
+
+        <!-- Main Playback Controls -->
+        <div class="controls">
+            <button id="prev" class="control-btn"><i class="fas fa-backward"></i></button>
+            <button id="play" class="control-btn play-btn"><i class="fas fa-play"></i></button>
+            <button id="next" class="control-btn"><i class="fas fa-forward"></i></button>
+        </div>
+
+        <!-- Volume Control -->
+        <div class="volume-container">
+            <i class="fas fa-volume-down"></i>
+            <input type="range" id="volume-bar" min="0" max="1" step="0.01" value="0.5">
+            <i class="fas fa-volume-up"></i>
+        </div>
+        
+    </div>
+
+    <!-- Script at the end of body -->
+    <script src="script.js"></script>
+</body>
+</html>
